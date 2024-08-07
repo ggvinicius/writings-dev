@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-family: "Poppins", sans-serif;
+    font-size: 6.25%;
+}
+
+body {
+    background-color: #232830;
+    font-size: 16rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1244px;
+    margin: auto;
+}
+
+.line {
+    height: 3px;
+    width: 100%;
+    background-color: #4D4D4D;
+    opacity: .3;
+}
+
+header {
+    margin-top: 75rem;
+}
+
+header .logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24rem;
+}
+
+header nav a:hover {
+    color: #c7c7c7;
+}
+
+header nav ul {
+    display: flex;
+    gap: 36rem;
+}
+
+header nav li {
+    list-style-type: none;
+}
+
+header .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 73rem 0 100rem;
+}
+
+header .hero h1 {
+    font-family: Recursive;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 70rem;
+    color: #FF7575;
+
+    margin: 40rem 0 17rem;
+}
+
+header .hero p {
+    color: #fff;
+    font-size: 28rem;
+}
+
+/* Category Listing */
+.category-list {
+    display: flex;
+    align-items: center;
+    margin-top: 16rem;
+}
+
+.category-list .icons {
+    text-decoration: none;
+    display: flex;
+    gap: 13rem;
+    margin-right: 41rem;
+}
+
+.category-list ul {
+    display: flex;
+    gap: 36rem;
+}
+
+.category-list ul li {
+    list-style-type: none;
+}
+
+.category-list ul a {
+    text-decoration: none;
+    color: #909090;
+    font-size: 27rem;
+}
+
+.category-list ul a:hover {
+    color: #bebebe;
+}
+
+/* Card área */
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 37rem;
+    margin-top: 90rem;
+}
+
+main .card {
+    background-color: #f3f2f2;
+    padding: 26rem;
+    border-radius: 22rem;
+    transition: .2s;
+}
+
+main .card img {
+    width: 338rem;
+}
+
+main .card:hover {
+    background-color: #fff;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+main .card h2 {
+    font-size: 19rem;
+    margin: 30rem 0 15rem;
+}
+
+main .card p {
+    font-size: 16rem;
+    margin-bottom: 24rem;
+}
+
+main .card .infos {
+    display: flex;
+    gap: 20rem;
+}
+
+/* Paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90rem;
+    margin-bottom: 90rem;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #909090;
+    padding: 16rem 22rem 0;
+    border-top: 3px solid #232830;
+    /* padding: 0 22rem; */
+}
+
+.pagination a:hover {
+    color: #FF7575;
+    border-top: 3px solid #FF7575;
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 35rem;
+    margin-bottom: 120rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .logo {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+}
+
+footer>a {
+    display: flex;
+    align-items: center;
+}
+
+footer>a img {
+    margin-right: 5rem;
+}
+
+footer .bgLink {
+    background-color: #4699E0;
+    padding: 4rem 12rem;
+    border-radius: 5rem;
+    transition: .2s;
+}
+
+footer .bgLink:hover {
+    background-color: #3482c7;
+    transform: scale(1.05);
+}
+
+header .menuMobile {
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width:1244px) {
+    header .hero h1 {
+        font-size: 60rem;
+        text-align: center;
+    }
+
+    .category-list ul a {
+        font-size: 22rem;
+    }
+
+    .category-list {
+        flex-direction: column;
+        gap: 20rem;
+    }
+
+    .category-list .icons {
+        margin-right: 0;
+    }
+
+    .category-list ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 26rem;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 390rem);
+        justify-content: center;
+    }
+}
+
+@media (max-width:830px) {
+    nav {
+        display: none;
+    }
+
+    header .menuMobile {
+        display: block;
+    }
+
+    header .hero h1 {
+        font-size: 44rem;
+    }
+
+    header .hero p {
+        font-size: 18rem;
+    }
+
+    main {
+        grid-template-columns: 390rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20rem;
+    }
+}
+
+@media (max-width:450px) {
+    .category-list ul a {
+        font-size: 16rem;
+    }
+
+    header .logo a {
+        font-size: 25rem;
+    }
+
+    header .hero img {
+        width: 150rem;
+    }
+
+    header .hero h1 {
+        font-size: 28rem;
+    }
+
+    header .hero p {
+        font-size: 12rem;
+        text-align: center;
+    }
+
+    .pagination a {
+        padding: 18rem 10rem 0;
+    }
+
+    main {
+        grid-template-columns: auto;
+    }
+
+    main .card {
+        padding: 18rem;
+    }
+
+    main .card img {
+        width: 100%;
+    }
+
+    main .card h2 {
+        font-size: 15rem;
+    }
+
+    main .card p {
+        font-size: 14rem;
+    }
+
+    header .menuMobile img {
+        width: 26rem;
+    }
+}
